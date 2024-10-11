@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#exerciseArea {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#fixationGuide {
+    display: block;
+    margin: 0 auto 10px auto; /* Centrar la imagen arriba */
+    height: 50px;
+}
+
+.line {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: transparent;
+    transition: background-color 0.5s ease; /* Para la animación del subrayado */
+}
+
+.line.highlight {
+    background-color: #87CEFA; /* Fondo azul para subrayado */
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.line.active {
+    display: block; /* Mostrar las líneas activas */
+}
+
+#textArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+

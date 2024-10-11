@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fijación en Bloques</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FIJACIÓN EN BLOQUES EN UNA COLUMNA</h1>
+        <p id="p1">
+            A continuación encontrarás un ejercicio con un texto, con una serie de puntos, que te indicarán las fijaciones que debes hacer por cada línea, de manera que logres percibir de tres a cuatro palabras por cada marcación.
+            <br><br>
+            Recuerda que las palabras las debes percibir y no expresar su sonido ni física ni mentalmente.
+        </p>
+
+        <div id="div1" class="controls">
+            <label for="speed">Velocidad (ms):</label>
+            <input type="number" id="speed" value="300" min="100"> <!-- Campo de entrada numérico con valor predeterminado de 300ms -->
+            <button id="startBtn">Iniciar</button>
+        </div>
+        <div id="timer" class="hidden">Tiempo restante: 3:00</div>
+        <div id="exerciseArea" class="hidden">
+            <img src="curva.png" alt="Curva de fijación" id="fixationGuide" >
+            <div id="textArea">
+                <!-- Las líneas de texto aparecerán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
