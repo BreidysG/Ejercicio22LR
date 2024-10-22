@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     color: #333;
     display: flex;
@@ -7,14 +7,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url(/1.png);
+    background-size: cover;
+    background-position: center; /* Centra la imagen de fondo */
+    text-align: center; /* Centrar el texto en todo el body */
 }
 
 .container {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    padding: 30px;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    max-width: 727px; /* Limitar el ancho del contenedor */
+    width: 90%; /* Ancho responsivo */
+    backdrop-filter: blur(5px); /* Añadir un desenfoque al fondo */
 }
 
 #exerciseArea {
@@ -25,33 +31,47 @@ body {
 
 #fixationGuide {
     display: block;
-    margin: 0 auto 10px auto; /* Centrar la imagen arriba */
-    height: 50px;
+    margin: 0 auto 15px auto; /* Centrar la imagen arriba */
+    height: 60px; /* Aumentar la altura de la imagen */
+    transition: transform 0.3s ease; /* Animación al hacer hover */
+}
+
+#fixationGuide:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
 }
 
 .line {
-    font-size: 18px;
-    margin: 5px 0;
-    padding: 5px;
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+    margin: 10px 0; /* Espaciado aumentado entre líneas */
+    padding: 10px; /* Espaciado interno aumentado */
     background-color: transparent;
-    transition: background-color 0.5s ease; /* Para la animación del subrayado */
+    border-radius: 5px; /* Bordes redondeados para líneas */
+    transition: background-color 0.5s ease, transform 0.3s; /* Añadir transformación suave */
 }
 
 .line.highlight {
     background-color: #87CEFA; /* Fondo azul para subrayado */
 }
 
+.line.active {
+    display: block; /* Mostrar las líneas activas */
+    transform: scale(1.05); /* Efecto de aumento para líneas activas */
+}
+
 #timer {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 22px; /* Aumentar el tamaño del temporizador */
+    font-weight: bold; /* Poner el texto en negrita */
+    color: #ff4500; /* Cambiar color del temporizador a un tono vibrante */
+    transition: color 0.5s ease; /* Animación de cambio de color */
+}
+
+#timer.warning {
+    color: #ff0000; /* Cambiar a rojo cuando el tiempo está por acabar */
 }
 
 .controls {
-    margin-bottom: 20px;
-}
-
-.line.active {
-    display: block; /* Mostrar las líneas activas */
+    margin-bottom: 30px;
 }
 
 #textArea {
@@ -60,8 +80,26 @@ body {
     justify-content: center;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
+/* Estilos para botones */
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
 
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
