@@ -103,3 +103,52 @@ button {
 button:hover {
     background-color: #45a049; /* Color más oscuro al pasar el mouse */
 }
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    #fixationGuide {
+        height: 50px;
+    }
+
+    .line {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #timer {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    #fixationGuide {
+        height: 40px;
+    }
+
+    .line {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #timer {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
