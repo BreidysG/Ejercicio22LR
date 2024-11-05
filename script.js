@@ -44,6 +44,7 @@ function startTimer() {
         if (timer <= 0) {
             clearInterval(timerInterval);
             alert("¡Tiempo terminado!");
+            final();
         }
     }, 1000);
 }
@@ -88,4 +89,7 @@ function highlightLine(line, callback) {
         line.classList.remove('highlight'); // Quitar el fondo después de la duración
         callback(); // Llamar a la siguiente acción
     }, speed);
+}
+function final(){
+    document.getElementById("exerciseArea").classList.add("hidden");
 }
